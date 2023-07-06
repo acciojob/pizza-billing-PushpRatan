@@ -16,6 +16,7 @@ public class Pizza {
         }else{
             this.price = 400;
         }
+        this.bill = "Base Price Of The Pizza: "+this.price+"\n";
     }
 
     public int getPrice(){
@@ -46,26 +47,21 @@ public class Pizza {
 
     public String getBill(){
         // your code goes here
-        if(isVeg){
-            System.out.println("Base Price Of The Pizza: 300");
-        }else{
-            System.out.println("Base Price Of The Pizza: 400");
-        }
         if(isCheese){
-            System.out.println("Extra Cheese Added: 80");
+            bill+="Extra Cheese Added: 80\n";
         }
         if(istopping){
             if(isVeg){
-                System.out.println("Extra Toppings Added: 70");
+                bill+="Extra Toppings Added: 70\n";
             }else{
-                System.out.println("Extra Toppings Added: 120");
+                bill+="Extra Toppings Added: 120\n";
             }
         }
         if(istakeaway){
-            System.out.println("Paperbag Added: 20");
+            bill+="Paperbag Added: 20\n";
         }
-        System.out.println("Total Price: "+this.price);
-        bill = "";
+        bill+="Total Price: "+this.price+"\n";
+
         return this.bill;
     }
 }
